@@ -4,13 +4,9 @@ export function generateChecklist(skills: ExtractedSkills): RoundChecklist[] {
   const hasSkill = (category: keyof ExtractedSkills, keyword: string) =>
     skills[category].some((s) => s.toLowerCase().includes(keyword.toLowerCase()))
 
-  const hasWeb = skills.web.length > 0
-  const hasData = skills.data.length > 0
   const hasCloud = skills.cloudDevOps.length > 0
-  const hasTesting = skills.testing.length > 0
   const hasJava = hasSkill('languages', 'java')
   const hasPython = hasSkill('languages', 'python')
-  const hasJavaScript = hasSkill('languages', 'javascript') || hasSkill('languages', 'typescript')
   const hasReact = hasSkill('web', 'react')
   const hasNode = hasSkill('web', 'node')
   const hasSQL = hasSkill('data', 'sql')

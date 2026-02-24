@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+
 import { Button } from '../ui/Button'
 import { Copy, CheckCircle, XCircle, ImagePlus } from 'lucide-react'
 

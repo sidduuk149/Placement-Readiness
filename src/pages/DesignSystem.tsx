@@ -11,7 +11,7 @@ import { ProgressIndicator } from '../components/ui/ProgressIndicator'
 import { Checkbox } from '../components/ui/Checkbox'
 import { useState } from 'react'
 
-function ColorSwatch({ name, color, hex }: { name: string; color: string; hex: string }) {
+function ColorSwatch({ name, hex }: { name: string; hex: string }) {
   return (
     <div className="flex flex-col gap-2">
       <div
@@ -40,7 +40,6 @@ function SpacingDemo({ size, label }: { size: string; label: string }) {
 
 export default function DesignSystem() {
   const [checked, setChecked] = useState(false)
-  const [inputValue, setInputValue] = useState('')
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -63,11 +62,11 @@ export default function DesignSystem() {
             <section>
               <h2 className="font-serif text-2xl text-foreground mb-6">Color Palette</h2>
               <div className="grid grid-cols-5 gap-4">
-                <ColorSwatch name="Background" color="background" hex="#F7F6F3" />
-                <ColorSwatch name="Foreground" color="foreground" hex="#111111" />
-                <ColorSwatch name="Accent" color="accent" hex="#8B0000" />
-                <ColorSwatch name="Success" color="success" hex="#4A7C59" />
-                <ColorSwatch name="Warning" color="warning" hex="#B8860B" />
+                <ColorSwatch name="Background" hex="#F7F6F3" />
+                <ColorSwatch name="Foreground" hex="#111111" />
+                <ColorSwatch name="Accent" hex="#8B0000" />
+                <ColorSwatch name="Success" hex="#4A7C59" />
+                <ColorSwatch name="Warning" hex="#B8860B" />
               </div>
             </section>
 
